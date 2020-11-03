@@ -1,0 +1,10 @@
+<h1>Dogs</h1>
+<br>
+
+<% @dogs.each do |d| %>
+<ul>
+<li><%= link_to d.name, dog_path(d) %></li>
+</ul>
+<% end %>
+
+<%= button_to "Sort by employee count", dogs_path, method: :get, name: :sort %>
